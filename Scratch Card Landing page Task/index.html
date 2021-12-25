@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Modal popUp-->
+
+    <div class="modal fade " id="exampleModal" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="./images/coin-animation.gif" alt="coin" class="coin" />
+                    <h4 class="popUp-title">Lets play ! You have three free attempts to win</h4>
+                    <button class="startNow-btn">Start Now!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="wrap-inner">
+            <div class="row ">
+                <img src="./images/ohmyspins-logo.png" class="gameLogo" alt="logo" />
+            </div>
+            <div class="row landingPage">
+                <div class="col-md-6 col-sm-12">
+                    <h1>scratch the cards and win </h1>
+                    <p class="yellow-text"> Three free attempts to win up to $10 000 </p>
+                    <div class="boxes mb-4">
+                        <span class="attemptBox">Your attempts
+                         <span class="counter">3</span>
+                        </span>
+                        <button class="scratchBtn mt-4">Find your numbers</button>
+                    </div>
+                </div>
+                <div class="col-6 scratch">
+                    <img src="./Links/Vector Smart Object.png" class="scratchCard" alt="" />
+                    <div class="inner">
+
+                        <div class="text-center ">
+                            <p class="uppercase"><img src="./Links/Vector Smart Object_2.svg " class="vetor2" alt=""> Winning numbers<img src="./Links/Vector Smart Object_2.svg" class="vetor2" alt=""></p>
+                            <div class="bgWin">
+                                <div class="winWin"></div>
+                            </div>
+                            <p class="uppercase"><img src="./Links/Vector Smart Object_2.svg " class="vetor2" alt=""> Your numbers<img src="./Links/Vector Smart Object_2.svg" class="vetor2" alt=""></p>
+                        </div>
+                        <div id="container">
+                            <div class="starDiv">
+                                <span class=" card">
+                                <span class="numbers "></span></span>
+                                <span class=" card">
+                                <span class="numbers "></span></span><span class=" card">
+                                 <span class="numbers "></span></span>
+                            </div>
+                            <div class="starDiv">
+                                <span class=" card">
+                                <span class="numbers "></span></span>
+                                <span class=" card">
+                                <span class="numbers "></span></span><span class=" card">
+                                 <span class="numbers "></span></span>
+                            </div>
+                            <div class="starDiv">
+                                <span class=" card">
+                                <span class="numbers "></span></span>
+                                <span class=" card">
+                                <span class="numbers "></span></span><span class=" card">
+                                 <span class="numbers "></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="./wScratchPad.min.js"></script>
+</body>
+
+</html>

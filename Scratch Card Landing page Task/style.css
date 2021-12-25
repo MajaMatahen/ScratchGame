@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.yellow-text {
+    color: #f1e136;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.container-fluid {
+    background: url("./images/ohmyspins_bg.jpg") center/cover no-repeat;
+    height: 100vh;
+}
+
+.wrap-inner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/* Pop-up styles  */
+
+.modal {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #00c2ff !important;
+    pointer-events: none !important;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.coin {
+    height: 100px;
+}
+
+.popUp-title {
+    color: white;
+    text-transform: uppercase;
+}
+
+.startNow-btn {
+    /* display: block; */
+    border-radius: 3px;
+    margin: 0 auto;
+    background-color: #f1e136;
+    padding: 5px 50px;
+    color: #f71273;
+    text-transform: uppercase;
+    border: none;
+    font-weight: bold;
+}
+
+.landingPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBalance {
+    border: none !important;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+
+.scratchBtn {
+    background-color: #f71273;
+    padding: 20px 15px;
+    border: none !important;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.scratchBtn:hover {
+    cursor: pointer;
+}
+
+.gameLogo {
+    height: 125px;
+    width: 150px !important;
+}
+
+.scratch {
+    display: flex;
+    justify-content: center;
+    position: relative !important;
+}
+
+.scratchCard {
+    height: 600px;
+    width: 380px;
+    padding-bottom: 25px;
+}
+
+.inner {
+    position: absolute !important;
+    bottom: 15%;
+}
+
+.star {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.starDiv {
+    padding-bottom: 10px;
+}
+
+#container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 50px;
+    height: 50px;
+    border-radius: 50% !important;
+    background-image: url("./Links/Vector-Smart-Object_4.svg");
+    background-size: contain;
+    position: relative;
+    user-select: none;
+    border: 0 !important;
+    position: relative;
+    margin: 5px;
+}
+
+.vetor2 {
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.winNumber {
+    padding: 0 5px;
+}
+
+.numbers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.attemptBox {
+    background-color: #f1e136;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+    color: #f71273;
+    font-weight: bold;
+}
+
+img,
+canvas {
+    border-radius: 10px;
+}
+
+.card:active {
+    transform: scale(1.05);
+}
+
+.bgWin {
+    margin-bottom: 20px;
+    background-color: #f71273;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.counter {
+    background-color: skyblue;
+    border-radius: 3px;
+    padding: 3px 10px;
+}
