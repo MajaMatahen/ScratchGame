@@ -18,6 +18,7 @@ h1 {
 .container-fluid {
     background: url("./images/ohmyspins_bg.jpg") center/cover no-repeat;
     height: 100vh;
+    position: relative;
 }
 
 .wrap-inner {
@@ -83,7 +84,8 @@ h1 {
 
 .scratchBtn {
     background-color: #f71273;
-    padding: 20px 15px;
+    width: 200px;
+    padding: 15px 0;
     border: none !important;
     border-radius: 5px;
     color: white;
@@ -165,7 +167,8 @@ h1 {
 
 .attemptBox {
     background-color: #f1e136;
-    padding: 15px 20px;
+    width: 200px;
+    padding: 15px 15px;
     border-radius: 5px;
     margin-right: 20px;
     color: #f71273;
@@ -191,7 +194,49 @@ canvas {
 }
 
 .counter {
-    background-color: skyblue;
+    background-color: #00c2ff !important;
     border-radius: 3px;
     padding: 3px 10px;
+}
+
+.modalCongrats {
+    position: fixed;
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Modal Content/Box */
+
+.modalCongrats-content {
+    background-color: #00c2ff !important;
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

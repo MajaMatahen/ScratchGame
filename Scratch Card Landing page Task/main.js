@@ -2,13 +2,15 @@ $(function() {
     $(document).ready(function() {
         $("#exampleModal").modal("show");
     });
+
     let numbers = $(".numbers");
-    console.log(numbers);
-    let isScratch = 0;
+    // let isScratch = 0; da proveruva dali card e scratch
     let win = [];
+    let winLenght = 5;
     let winNumbersArr = [];
     let thirdAttemptArr = [];
     let attemptCount = 3;
+
     $(".startNow-btn").on("click", function() {
         $("#exampleModal").modal("remove");
     });
@@ -24,55 +26,82 @@ $(function() {
     }
 
     function winNumbersFunc() {
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < winLenght; i++) {
             let randomWinNum = randomNum();
             winNumbersArr.push(randomWinNum);
-            console.log(winNumbersArr);
             $(".winWin").append(`<span class="winNumber">${randomWinNum}</span>`);
         }
     }
+
     winNumbersFunc();
     $(".scratchBtn").on("click", startGame);
     $(".card").wScratchPad({
-        size: 15,
-        bg: `/Links/Vector-Smart-Object_4.svg`,
         fg: `./Links/Vector-Smart-Object_3.svg`,
         cursor: "pointer",
     });
+
+    let clickBtn = $(".card").wScratchPad();
+    clickBtn.on("mousedown", function() {
+        console.log($(this).index());
+
+        console.log("maja");
+    });
+
+    function modalCongrats() {
+        $(".container-fluid").append(`<div id="myModal" class="modalCongrats">
+        <!-- Modal content -->
+        <div class="modalCongrats-content">
+          <span class="close">&times;</span>
+          <p class="titleCongrats">Congrats!!! You WIN the Game.</p>
+        </div>
+      
+      </div>`);
+
+        $(".close").on("click", function() {
+            $(".modalCongrats").hide();
+        });
+    }
 
     function startGame() {
         $(".card").wScratchPad("reset");
         console.log("start button clicked startGame");
         if (attemptCount == 1) {
-            console.log(attemptCount);
             for (let i = 0; i < 4; i++) {
                 win.push(randomNum());
                 console.log(win);
             }
             let thirdAttemptArr = winNumbersArr.concat(win);
             console.log(thirdAttemptArr);
+
             for (let i = 0; i < thirdAttemptArr.length; i++) {
                 numbers[i].innerText = thirdAttemptArr[i];
             }
             let includesNum = winNumbersArr.every((item) =>
                 thirdAttemptArr.includes(item)
             );
+            if (!includesNum) {
+                modalCongrats();
+            } else {
+                modalCongrats();
+            }
             $(".winWin").show();
-            $(".scratchBtn").disabled();
-            console.log(includesNum);
-            console.log("Congrats!");
+            $(".counter").text("No attempts left");
         } else {
-            console.log(attemptCount);
             for (let i = 0; i < numbers.length; i++) {
                 numbers[i].innerText = randomNum();
             }
             let includesNum = winNumbersArr.every((item) =>
                 thirdAttemptArr.includes(item)
             );
-            console.log("You are close to WIN");
-            console.log(includesNum);
+            if (!includesNum) {
+                modalCongrats();
+                $(".titleCongrats").text("You are so close.Play again");
+            } else {
+                modalCongrats();
+            }
+
+            attemptCount--;
+            $(".counter").text(attemptCount);
         }
-        attemptCount--;
-        $(".counter").text(attemptCount);
     }
 });
