@@ -50,9 +50,36 @@ $(function() {
     function modalCongrats() {
         $(".container-fluid").append(`<div id="myModal" class="modalCongrats">
         <!-- Modal content -->
-        <div class="modalCongrats-content">
+        <div class="modalCongrats-content text-center w-75">
           <span class="close">&times;</span>
-          <p class="titleCongrats">Congrats!!! You WIN the Game.</p>
+          <img src="./images/coin-animation.gif" alt="coin" class="coin" />
+
+          <p class="popUp-title">Congrats!!! You WIN the Game.</p>
+          <div class="containerForm mt-3">
+    <p>Signup to collect your winnings</p>
+     <form  class="was-validated">
+      <div class="mb-3 mt-3">
+        <label for="uname" class="form-label">Username:</label>
+        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required/>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="mb-3">
+        <label for="pwd" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="pwd" placeholder="Enter your e-mail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" required/>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="myCheck"  name="remember" required/>
+        <label class="form-check-label" for="myCheck">I agree on therms .</label>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </div>
+   <button class="gameBtn" id="btn" class="btn" type ="submit" >Play now </button>
+    </form>
+    <a href="https://vitamediagroup.com/">Therms and conditions</a>
+  </div>
         </div>
       
       </div>`);
@@ -60,6 +87,9 @@ $(function() {
         $(".close").on("click", function() {
             $(".modalCongrats").hide();
         });
+
+
+
     }
 
     function startGame() {
@@ -95,7 +125,8 @@ $(function() {
             );
             if (!includesNum) {
                 modalCongrats();
-                $(".titleCongrats").text("You are so close.Play again");
+                $(".popUp-title").text("You are so close.Play again");
+                $(".containerForm").hide()
             } else {
                 modalCongrats();
             }

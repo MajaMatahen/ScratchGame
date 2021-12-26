@@ -8,10 +8,14 @@ h1 {
     text-transform: uppercase;
 }
 
+.uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .yellow-text {
     color: #f1e136;
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 1.4rem;
     margin-bottom: 60px;
 }
 
@@ -26,13 +30,20 @@ h1 {
     margin: 0 auto;
 }
 
-.uppercase {
+.gameBtn {
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: #f1e136;
+    padding: 5px 50px;
+    color: #f71273;
     text-transform: uppercase;
+    border: none;
     font-weight: bold;
 }
 
-
-/* Pop-up styles  */
+.gameBtn a {
+    color: #f71273 !important;
+}
 
 .modal {
     display: flex !important;
@@ -55,31 +66,15 @@ h1 {
 
 .popUp-title {
     color: white;
-    text-transform: uppercase;
-}
-
-.startNow-btn {
-    /* display: block; */
-    border-radius: 3px;
-    margin: 0 auto;
-    background-color: #f1e136;
-    padding: 5px 50px;
-    color: #f71273;
-    text-transform: uppercase;
-    border: none;
     font-weight: bold;
+    font-size: 1.4rem;
 }
 
 .landingPage {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.inputBalance {
-    border: none !important;
-    border-radius: 4px;
-    padding: 5px 15px;
+    text-align: center;
 }
 
 .scratchBtn {
@@ -89,8 +84,6 @@ h1 {
     border: none !important;
     border-radius: 5px;
     color: white;
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
 .scratchBtn:hover {
@@ -180,10 +173,6 @@ canvas {
     border-radius: 10px;
 }
 
-.card:active {
-    transform: scale(1.05);
-}
-
 .bgWin {
     margin-bottom: 20px;
     background-color: #f71273;
@@ -202,7 +191,6 @@ canvas {
 .modalCongrats {
     position: fixed;
     z-index: 1;
-    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
@@ -212,20 +200,13 @@ canvas {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-
-/* Modal Content/Box */
-
 .modalCongrats-content {
     background-color: #00c2ff !important;
-    color: white;
     margin: 15% auto;
     padding: 20px;
     width: 40%;
     border-radius: 10px;
 }
-
-
-/* The Close Button */
 
 .close {
     color: #aaa;
